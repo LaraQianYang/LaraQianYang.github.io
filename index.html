@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lara Qian Yang</title>
+        
+        <script src="Color.js"></script>
+        
+        <script>
+            $(document).ready(function() {
+                              (function() {
+                               //settings
+                               var fadeSpeed = 200, fadeTo = 0.5, topDistance = 30;
+                               var topbarME = function() { $('#uberbar').fadeTo(fadeSpeed,1); }, topbarML = function() { $('#uberbar').fadeTo(fadeSpeed,fadeTo); };
+                               var inside = false;
+                               //do
+                               $(window).scroll(function() {
+                                                position = $(window).scrollTop();
+                                                if(position > topDistance && !inside) {
+                                                //add events
+                                                topbarML();
+                                                $('#uberbar').bind('mouseenter',topbarME);
+                                                $('#uberbar').bind('mouseleave',topbarML);
+                                                inside = true;
+                                                }
+                                                else if (position < topDistance){
+                                                topbarME();
+                                                $('#uberbar').unbind('mouseenter',topbarME);
+                                                $('#uberbar').unbind('mouseleave',topbarML);
+                                                inside = false;
+                                                }
+                                                });
+                               })();
+                              });
+            </script>
+        
+        
+        <style>
+        body {
+                width:70%;
+                margin:0 auto;
+                background-color: #ffffff;
+                margin-top:100px;/*push the page content down*/
+            }
+        
+        h1 {
+            color: black;
+            text-align: center;
+        }
+        h1  span{
+            background-color: rgba(0,0,0, 0.1);
+            color: black;
+            padding: 1%;
+            width: 100%;
+            display:inline-block; /*optional */
+        }
+        h2 {
+            color: black;
+        }
+        h3 {
+            color: black;
+        }
+        p {
+            font-family: "Times New Roman";
+            font-size: 16px;
+            text-align:justify
+        }
+        p1 {
+            font-family: "Times New Roman";
+            font-size: 16px;
+            text-align:justify
+        }
+        /*h2 {
+            color: black;
+            font-size: 18px;
+        }
+        h3 {
+            color: black;
+            font-size: 13px;
+        }
+        p {
+            font-family: "Times New Roman";
+            font-size: 16px;
+            text-align:justify
+        }
+        p1 {
+            font-family: "Times New Roman";
+            font-size: 13px;
+            text-align:justify
+        }
+         */
+        .left_img {
+            float: left;
+        }
+        
+        .clear {
+            clear: both;
+        }
+        
+        #uberbar    {
+            border-bottom:1px solid rgba(0,0,0, 0.8);
+            background:rgba(0,0,0, 0.8);
+            padding:1%;
+            position:fixed;
+            top:0;
+            left:0;
+            z-index:2000;
+            width:100%;
+        }
+        
+        
+        </style>
+        
+    </head>
+    <body>
+        <div id="uberbar" style="width:100%; margin:0 auto; text-align: center; font-size: 20px">
+            <a href="#cv" style="color: white; text-decoration: none">Qian Yang |</a>
+            <a href="#news" style="color: white; text-decoration: none">News |</a>
+            <a href="#publications" style="color: white; text-decoration: none">Publications |</a>
+            <!--<a href="#research" style="color: white; text-decoration: none">Research |</a>-->
+            <a href="#projects" style="color: white; text-decoration: none">Selected Projects |</a>
+            <a href="#patents" style="color: white; text-decoration: none">Patents |</a>
+            <a href="#awards" style="color: white; text-decoration: none">Awards |</a>
+            <a href="#talks" style="color: white; text-decoration: none">Talks |</a>
+            <a href="#activities" style="color: white; text-decoration: none">Activities |</a>
+            <a href="#misc" style="color: white; text-decoration: none">Misc.</a>
+        </div>
+
+        <!--<nav>
+            <a href="/html/">HTML</a> |
+            <a href="/css/">CSS</a> |
+            <a href="/js/">JavaScript</a> |
+            <a href="/jquery/">jQuery</a>
+        </nav>
+        <br /><br />-->
+        <section id="cv">
+        <h1><span>Qian Yang</span></h1>
+
+
+        <p>
+            <img src="images/laraqianyang4.jpg" alt="Qian Yang" align="left" style="margin: 0 20px 80px 20px">
+            
+            I am currently a postdoctoral researcher working with <a href="http://people.ee.duke.edu/~lcarin/" style="color: rgba(0,0,0); text-decoration: none"><b>Lawrence Carin</b></a> at Duke University. Before that, I worked with <a href="https://sites.psu.edu/becky/" style="color: rgba(0,0,0); text-decoration: none"><b>Rebecca J. Passonneau</b></a> at both Columbia University and Pennsylvania State University. I received my PhD in Computer Science and Technology from Tsinghua University, advised by <a href="http://gerard.demelo.org" style="color: rgba(0,0,0); text-decoration: none"><b>Gerard de Melo</b></a>. At Tsinghua, I was a member of the Web Mining and Language Technology group, part of the Institute for Interdisciplinary Information Sciences, which is led by Turing award winner Andrew Yao.
+            <br />
+            <br />
+            My current research focuses on a wide range of topics in Natural Language Processing, Machine Learning, and the intersection of Machine Learning with Biomedical Data Science, Education, and Human-Computer Interaction.
+            <br />
+            <br />
+            Dear Students: Please contact me if you are interested in related research projects!
+            <br />
+            <I>Email: </I>laraqianyang[at]gmail[dot]com      
+        <br />
+</section>
+<!-- news Section================================================== -->
+<section id="news">
+    
+    <div class="row section-head">
+        
+        <div class="twelve columns">
+            <br />
+            <br />
+            <h1><span>News</span></h1>
+            <!--<hr /> horizontal rule-->
+            <p>
+            <ul style="font-size: 16px">
+                <li>I will chair a research session (Deep Sequence Modeling) at KDD 2020.</li>
+                <li>Nominated for the 2019 Outstanding Postdoc at Duke University award. Very humbled to be nominated, as "this nomination recognizes you as someone who serves not only as a skilled researcher, but as an advisor, advocate, teacher and role model to other postdoctoral scholars and to students at Duke." I will also consider this the ultimate goal of my career and work hard towards it.</li>
+                <li>I will chair a session (Financial/Econ, Medical Imaging and Health) at AAAI 2020.</li>
+                <li>One paper got accepted by AAAI, 2020.</li>
+                <li>I will be a lecturer at Duke Natural Language Processing Winter School (NLP-WS), January 6-8, 2019. Welcome to register at <a href="https://strategicplan.duke.edu/initiatives/natural-language-processing-winter-school/">this link</a>.</li>
+                <li>Two papers got accepted by NeurIPS, 2019.</li>
+                <li>One paper got accepted by EMNLP, 2019.</li>
+                <li>One paper got accepted by ACL, 2019.</li>
+                <li>One paper got accepted by ICML, 2018.</li>
+                <li>I passed my Ph.D. final defense on May 31, 2017.</li>
+                <li>I was awarded a Google Women Techmakers Scholarship (previously known as Google Anita Borg Memorial Scholarship).</li>
+                <li>I finished a marathon on Apri 15, 2017. Only two girls from our institute joined the marathon. She said to me, "Thanks for your persistence because when I wanna give up I knew you were in the front." I was in turn inspired by these words from her.</li>
+                <li>I will give a presentation at WWW 2017, Perth, Australia in April of 2017.</li>
+                <li>I will spend 5 months visiting <a href="http://www-i6.informatik.rwth-aachen.de/web/Staff/ney/" style="color: black; text-decoration: none">Dr.-Ing. Hermann Ney</a> in the autumn of 2016.</li>
+                <li>I will give an oral presentation at AAAI 2016, Phoenix, Arizona, USA in February of 2016.</li>
+            </ul>
+            </p>
+        </div>
+        
+    </div>
+    
+    
+    
+</section>  <!-- /research-->
+
+
+<!-- publications Section
+ ================================================== -->
+<section id="publications">
+    
+    <div class="row section-head">
+        
+        <div class="twelve columns">
+            <br />
+            <br />
+            <h1><span>Publications</span></h1>
+
+            <!--<b>Publications by Topic:</b> All | <a href="publications-nlp.html">Natural Language Processing</a> | <a href="publications-dl.html">Machine Learning/Deep Learning</a> | <a href="publications-kb.html">Knowledge Graphs</a> | <a href="publications-hci.html">Human-Computer Interaction</a><br/><br/><ul class="pub">-->
+            
+            <!---MTL--->
+            <p>
+                <a href="images/publications/aaai20_scheme.png"><img src="images/publications/aaai20_scheme.png" alt="mtl" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+                <strong>Graph-Driven Generative Models for Heterogeneous Multi-Task Learning.</strong>
+                <br />
+                <p1>
+                    Wenlin Wang, Hongteng Xu, Zhe Gan, Bai Li, Guoyin Wang, Liqun Chen, <strong>Qian Yang</strong>, Wenqi Wang and Lawrence Carin.
+                    <br />
+                    <i><strong>AAAI</strong>,</i> 2020.
+                    <br />
+                    <a href="https://arxiv.org/pdf/1911.08709.pdf" style="text-decoration: none">[Online]</a>
+                    <a href="others/aaai20.bib" style="text-decoration: none">[BiBTeX]</a>
+                </p1>
+            </p>
+            <br />
+
+            <!---Ouroboros--->
+            <p>
+                <a href="images/publications/neurips19_model_a.png"><img src="images/publications/neurips19_model_a.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+                <strong>Ouroboros: On Accelerating Training of Transformer-Based Language Models.</strong>
+                <br />
+                <p1>
+                    <strong>Qian Yang</strong>, Zhouyuan Huo, Wenlin Wang, Heng Huang, Lawrence Carin.
+                    <br />
+                    <i><strong>NeurIPS</strong>,</i> 2019.
+                    <br />
+                    <a href="https://arxiv.org/pdf/1909.06695.pdf" style="text-decoration: none">[Online]</a>
+                    <a href="others/neurips19a.bib" style="text-decoration: none">[BiBTeX]</a>
+                    <a href="https://github.com/LaraQianYang/Ouroboros" style="text-decoration: none">[Code]</a>
+                </p1>
+            </p>
+            <br />
+            <!---VHE--->
+            <p>
+                <a href="images/publications/neurips19_model_b.png"><img src="images/publications/neurips19_model_b.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+                <strong>Improving Textual Network Learning with Variational Homophilic Embeddings.</strong>
+                <br />
+                <p1>
+                    Wenlin Wang, Chenyang Tao, Zhe Gan, Guoyin Wang, Liqun Chen, Xinyuan Zhang, Ruiyi Zhang, <strong>Qian Yang</strong>, Ricardo Henao, Lawrence Carin.
+                    <br />
+                    <i><strong>NeurIPS</strong>,</i> 2019.
+                    <br /><a href="https://arxiv.org/pdf/1909.13456.pdf" style="text-decoration: none">[Online]</a>
+                    <a href="others/neurips19b.bib" style="text-decoration: none">[BiBTeX]</a>
+                </p1>
+            </p>
+            <br />
+             <!---GAP--->
+            <p>
+                <a href="images/publications/emnlp19_model.png"><img src="images/publications/emnlp19_model.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+                <strong>An End-to-End Generative Architecture for Paraphrase Generation.</strong>
+                <br />
+                <p1>
+                    <strong>Qian Yang</strong>, Zhouyuan Huo, Yong Cheng, Wenlin Wang, Guoyin Wang, Lawrence Carin.
+                    <br />
+                    <i><strong>EMNLP</strong>,</i> 2019.
+                    <br /><a href="papers/emnlp_gap.pdf" style="text-decoration: none">[Online]</a>
+                    <a href="others/emnlp19.bib" style="text-decoration: none">[BiBTeX]</a>
+                </p1>
+            </p>
+            <br />
+
+              <!---TextCompression--->
+            <p>
+                <a href="images/publications/acl19_model.png"><img src="images/publications/acl19_model.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+                <strong>Learning Compressed Sentence Representations for On-Device Text Processing.</strong>
+                <br />
+                <p1>
+                    Dinghan Shen, Pengyu Cheng, Dhanasekar Sundararaman, Xinyuan Zhang, <strong>Qian Yang</strong>, Meng Tang, Asli Celikyilmaz, Lawrence Carin.
+                    <br />
+                    <i><strong>ACL</strong>,</i> 2019. <strong>[Oral Presentation]</strong>
+                    <br />
+                    <a href="https://www.aclweb.org/anthology/P19-1011" style="text-decoration: none">[Online]</a>
+                    <a href="others/acl19.bib" style="text-decoration: none">[BiBTeX]</a>
+                    <a href="https://github.com/Linear95/BinarySentEmb" style="text-decoration: none">[Code]</a>
+                </p1>
+            </p>
+            <br />
+             <!---DDG--->
+            <p>
+                <a href="images/publications/icml18_algorithm.png"><img src="images/publications/icml18_algorithm.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+                <strong>Decoupled Parallel Backpropagation with Convergence Guarantee.</strong>
+                <br />
+                <p1>
+                    Zhouyuan Huo, Bin Gu, <strong>Qian Yang</strong>, Heng Huang.
+                    <br />
+                    <i><strong>ICML </strong>,</i> 2018. <strong>[Oral Presentation]</strong>
+                    <br />
+                    <a href="https://arxiv.org/pdf/1804.10574.pdf" style="text-decoration: none">[Online]</a> 
+                    <a href="others/icml18.bib" style="text-decoration: none">[BiBTeX]</a>
+                    <a href="https://github.com/slowbull/DDG" style="text-decoration: none">[Code]</a>
+                </p1>
+            </p>
+            <br />
+            <!---HiText--->
+            <p>
+                <a href="images/publications/www17_system.png"><img src="images/publications/www17_system.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+                <strong>HiText: Text Reading with Dynamic Salience Marking.</strong>
+                <br />
+                <p1>
+                    <strong>Qian Yang</strong>, Yong Cheng, Sen Wang, Gerard de Melo.
+                    <br />
+                    <i><strong>WWW</strong>,</i> 2017. <strong>[Oral Presentation]</strong>
+                    <br />
+                    <a href="http://papers.www2017.com.au.s3-website-ap-southeast-2.amazonaws.com/companion/p311.pdf" style="text-decoration: none">[Online]</a>
+                    <a href="others/www17.bib" style="text-decoration: none">[BiBTeX]</a>
+                </p1>
+            </p>
+            <br />
+            <!---pivotnmt--->
+            <p>
+            <a href="images/publications/ijcai17_auto.png"><img src="images/publications/ijcai17_auto.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+            <strong>Neural Machine Translation with Pivot Languages.</strong>
+            <br />
+            <p1>
+                Yong Cheng, <strong>Qian Yang</strong>, Yang Liu, Maosong Sun, Wei Xu.
+                <br />
+                <i><strong>IJCAI</strong>,</i> 2017.
+                <br />
+                <a href="others/pivotnmt.pdf" style="text-decoration: none">[Online]</a>
+                <a href="others/ijcai17.bib" style="text-decoration: none">[BiBTeX]</a>
+            </p1>
+            </p>
+            <br />
+            <!---rubrics--->
+            <p>
+            <a href="images/publications/ijaie16.png"><img src="images/publications/ijaie16.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+            <strong>Wise Crowd Content Assessment and Educational Rubrics.</strong>
+            <br />
+            <p1>
+                Rebecca J. Passonneau, Ananya Poddar, Gaurav Gite, Alisa Krivokapic, <strong>Qian Yang</strong>, Dolores Perin.
+                <br />
+                <i>International Journal of Artificial Intelligence in Education,</i> 10.1007/s40593-016-0128-6, 2016.
+                <br />
+                <a href="http://rdcu.be/nzBC" style="text-decoration: none">[Online]</a>
+                <a href="others/wise.bib" style="text-decoration: none">[BiBTeX]</a>
+            </p1>
+            </p>
+            <br />
+            <!---peak--->
+            <p>
+            <a href="images/publications/aaai16_graph2new.png"><img src="images/publications/aaai16_graph2new.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+            <strong>PEAK: Pyramid Evaluation via Automated Knowledge Extraction.</strong>
+            <br />
+            <p1>
+                <strong>Qian Yang</strong>, Rebecca J. Passonneau, Gerard de Melo.
+                <br />
+                <i><strong>AAAI </strong>,</i> 2016. <strong>[Oral Presentation]</strong>
+                <br />
+                <a href="others/peak.pdf" style="text-decoration: none">[Online]</a>
+                <a href="others/summary-peak.bib" style="text-decoration: none">[BiBTeX]</a>
+                <a href="http://www.larayang.com/peak/" style="text-decoration: none">[Code]</a>
+                <a href="others/QianYang-PEAK-slides.pdf" style="text-decoration: none">[Slides]</a>
+                <!-- https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12481/12007 -->
+            </p1>
+            </p>
+            <br />
+            <!---Key Management--->
+            <p>
+            <a href="images/publications/protocol.png"><img src="images/publications/protocol.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+            <strong>Research on the Key Management for AMI System.</strong>
+            <br />
+            <p1>
+                Jianfeng Yin, Aibo Shi, <strong>Qian Yang</strong>, Xiaohang Zhang, Liusheng Huang, Haitao Ji.
+                <br />
+                <i>Electrical Measurement and Instrumentation,</i> Issue No. 2, 2016.
+                <br />
+                <a href="http://d.wanfangdata.com.cn/Periodical/dcyyb201602017" style="text-decoration: none">[Online]</a>
+                <a href="others/iec62056.bib" style="text-decoration: none">[BiBTeX]</a>
+            </p1>
+            </p>
+            <br />
+            <!---QCFQND--->
+            <p>
+            <a href="images/publications/scf.png"><img src="images/publications/scf.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+            <strong>Semi-loss-tolerant Strong Quantum Coin-flipping Protocol Using Quantum Non-demolition Measurement.</strong>
+            <br />
+            <p1>
+                <strong>Qian Yang</strong>, Jiajun Ma, Fenzhuo Guo, Qiaoyan Wen.
+                <br />
+                <i>Quantum Information Processing,</i> 10.1007/s11128-014-0747-5, 2014.
+                <br />
+                <a href="http://link.springer.com/article/10.1007%2Fs11128-014-0747-5" style="text-decoration: none">[Online]</a>
+                <a href="others/QCF-QND.bib" style="text-decoration: none">[BiBTeX]</a>
+            </p1>
+            </p>
+            <br />
+            <!---QCFEPR--->
+            <p>
+            <a href="images/publications/semiscf.png"><img src="images/publications/semiscf.png" alt="peak" align="left" height="100" width="180" align="left" Hspace="0"  Vspace="0" style="margin: 0 20px 5px 20px"></a>
+            <strong>Semi-loss-tolerant Strong Coin Flipping Protocol Using EPR Pairs.</strong>
+            <br />
+            <p1>
+                Jiajun Ma, Fenzhuo Guo, <strong>Qian Yang</strong>, Yanbin Li, Qiaoyan Wen.
+                <br />
+                <i>Quantum Information and Computation,</i> Vol. 12 No. 5 and 6, 2011.
+                <br />
+                <a href="http://dl.acm.org/citation.cfm?id=2231005" style="text-decoration: none">[Online]</a>
+                <a href="others/QCF-EPR.bib" style="text-decoration: none">[BiBTeX]</a>
+            </p1>
+            </p>
+
+            
+        </div>
+        
+    </div>
+    
+    
+</section>
+<!-- /patents-->
+
+</section>  <!-- /projects-->
+
+
+<!-- projects Section
+ ================================================== -->
+<section id="projects">
+    
+    <div class="row section-head">
+        
+        <div class="twelve columns">
+            <br />
+            <br />
+            <h1><span>Selected Projects</span></h1>
+         
+            <h2>
+                <img src="peak/images/peak-logo.png" alt="peak" align="left" height="160" width="120" align="left" Hspace="30"  Vspace="10" style="margin: 0 20px 5px 20px">PEAK
+            </h2>
+                <p>
+                We provide a Java implementation of PEAK, the first tool to automatically generate the pyramid models that enables the whole automatical assessment of both human and machine summaries.
+                <br />
+                <br />
+                <a href="peak" style="text-decoration: none;">[Enter PEAK's homepage]</a>
+                </p>
+        </div>
+        
+    </div>
+    
+    
+    
+</section>  <!-- /projects-->
+
+
+<!-- patents Section
+ ================================================== -->
+<section id="patents">
+    
+    <div class="row section-head">
+        
+        <div class="twelve columns">
+            <br />
+            <br />
+            <h1><span>Patents</span></h1>
+            <p>
+            <strong>Three-Party Secret Key Management Method Based on IEC62056 Data Transmission Safety Standard.</strong>
+            <br />
+            <p1>
+                Patent number: 2014106212691
+                <br />
+                Filing date: Nov 6, 2014
+                <br />
+                Granted on July 10, 2018
+                <br />
+                <a href="others/CN104363219A.bibtex" style="text-decoration: none">[BiBTeX]</a>
+            </p1>
+            </p>
+            
+            
+        </div>
+        
+    </div>
+    
+    
+    
+</section>  <!-- /patents-->
+
+<!-- news Section================================================== -->
+<section id="awards">
+    
+    <div class="row section-head">
+        
+        <div class="twelve columns">
+            <br />
+            <br />
+            <h1><span>Awards</span></h1>
+            <!--<hr /> horizontal rule-->
+            <p>
+            <ul style="font-size: 16px">
+                <li>EAAI-20 New and Future AI Educator (Funded by the grants from NSF, AIJ, AAAI), 2020</li>
+                <li>Google Women Techmakers Scholar, Asia Pacific (Among 8 from Mainland China), 2017</li>
+                <li>RWTH – Tsinghua Research Fellowship (Provided by DAAD in Germany), 2016</li>
+                <li>Meritorious Winner of International Interdisciplinary Contest in Modeling (International), 2011</li>
+                <li>Third Prize of Scilab Contest (International), 2011</li>
+                <li>First Prize of National Mathematical Modeling Contest (National), 2010</li>
+                </br>
+                <li>Nomination for the 2019 Outstanding Postdoc at Duke University award, 2019</li>
+                <li>Outstanding Individual in Graduates’ Summer Internship (2 per institute), 2014</li>
+                <li>Scholarship for Overseas Graduate Students (University-level), 2014</li>
+                <li>Award for Natural Science Innovation (University-level), 2011</li>
+                <li>Gold Medal for Programming Contest (University-level), 2011</li>
+                <li>First Prize Scholarship (University-level), 2010 & 2009</li>    
+                <li>Enterprise Scholarship for Outstanding Student (¥5000, for the 5<sup>th</sup>/316 student), 2008</li>
+                <br />
+                <li>Outstanding Student Leader (1 per institute), 2014 & 2010</li>
+            </ul>
+            </p>
+        </div>
+        
+    </div>
+    
+    
+    
+</section>  <!-- /awards-->
+
+
+<!-- talks Section
+ ================================================== -->
+<section id="talks">
+    
+    <div class="row section-head">
+        
+        <div class="twelve columns">
+            <br />
+            <br />
+            <h1><span>Selected Talks</span></h1>
+            <p>
+            <ul style="font-size: 16px">
+                <li>Aligning Knowledge Graphs using Neural Reasoning.</strong> 
+                </br>Duke University, US. May 2019.</li>
+                </br>
+                <li>Identifying and Connecting Salient Information via Semantic Text Representations.</strong> 
+                </br>University of Pennsylvania, US. Mar. 2018.</li>
+                </br>
+                <li>HiText: Text Reading with Dynamic Salience Marking.</strong> 
+                </br>Pennsylvania State University, US. May 2017.</li>
+                </br>
+                <li>Semantic Text Representations.</strong> 
+                </br>Rutgers University, US. May 2017.</li>
+                </br>
+                <li>Disambiguation and Alignment of Semantic Representations.</strong> 
+                </br>Alibaba, China. Dec. 2016.</li>
+                </br>
+                <li>PEAK: Pyramid Evaluation via Automated Knowledge Extraction.</strong> 
+                </br>RWTH Aachen University, Germany. May 2016.</li>
+                </br>
+                <li>Disambiguation and Alignment Verbs in Structured Data.</strong> 
+                </br>Columbia University, US. Mar. 2015.</li>
+                </br>
+                <li>Differences between Semantic Role Labeling and Open Information Extraction.</strong> 
+                </br>Microsoft Research Asia, China. Jun. 2014.</li>
+                </br>
+            </ul>
+            </p>
+        </div>
+    </div>
+    
+    
+    
+</section>  <!-- /talks-->
+
+
+<!-- activities Section
+ ================================================== -->
+<section id="activities">
+    
+    <div class="row section-head">
+        
+        <div class="twelve columns">
+            <br />
+            <br />
+            <h1><span>Activities</span></h1>
+           
+     <h2>Academic Experience</h2>
+     <ul>
+            <li><p>2017.4 – 2017.5, Visiting Ph.D. Student,&nbsp;the Department of Computer Science, Rutgers University&nbsp;<br />
+                Supervisor:&nbsp;<a href="http://gerard.demelo.org/" style="color: black;text-decoration: none">Gerard de Melo</a></p></li>
+            <li><p>2016.5 – 2016.9, Visiting Ph.D. Student,&nbsp;<a href="https://www-i6.informatik.rwth-aachen.de/" style="color: black; text-decoration: none">the Human Language Technology and Pattern Recognition Group</a>, Computer Science Department, RWTH Aachen University&nbsp;<br />
+                Supervisor:&nbsp;<a href="http://www-i6.informatik.rwth-aachen.de/web/Staff/ney/" style="color: black;text-decoration: none">Dr.-Ing. Hermann Ney</a></p></li>
+            <li><p>2014.12 – 2015.3, Visiting Ph.D. Student,&nbsp;<a href="http://www.ccls.columbia.edu/" style="color: black; text-decoration: none">Center for Computational Learning Systems (CCLS)</a>, Columbia University in the City of New York&nbsp;<br />
+                Supervisor:&nbsp;<a href="http://www1.ccls.columbia.edu/~beck/" style="color: black;text-decoration: none">Rebecca J. Passonneau</a></p></li>
+     </ul>
+    
+    
+                
+     <h2>Teaching Experience</h2>
+     <img src="images/teaching_qian.png" height="200" width="300" alt="teaching_qian" align="right" style="margin: 0 20px 80px 20px">
+     <ul>
+        <li><p> Jan 2020, <strong>Natural Language Processing Winter School</strong> <br />
+                    Lecturer<br />
+                    Up to 200 participants, Duke University<br/>
+                    <a href="https://strategicplan.duke.edu/initiatives/natural-language-processing-winter-school/" style="color: black; text-decoration: none">[Homepage]</a><br/>
+        <li><p> Spring 2018, <strong>Natural Language Processing</strong> <br />
+                    Guest Lecturer<br />
+                    Graduate Course, CSE 597, Pennsylvania State University, Instructor: Rebecca J. Passonneau<br/ >
+        <li><p>Spring 2014 – 2015, <strong>Speech Science, Technology and Innovative Applications</strong> <br />
+                Teaching Assistant<br/>
+                    Tsinghua University, Instructors: P.C. Ching, Tan Lee, Ken Ma, Helen Meng, and William S.-Y. Wang, all from the Chinese University of Hong Kong, and Gerard de Melo, from Tsinghua University<br />
+                <a href="http://www.ee.cuhk.edu.hk/~tanlee/SST2015.html" style="color: black; text-decoration: none">[Course Homepage]</a><br/></p></li>
+               
+                 <li><p>Fall 2013 – 2014, </span><strong>Hot Topics in Computational Biology</strong><br/> 
+                    Teaching Assistant<br />
+                    Tsinghua University, Instructor: Jianyang (Michael) Zeng<br /></p></li>
+     </ul>
+     <h2>Professional Activities</h2>  
+     <ul>
+        <li><p>Program Committee Member<br /> NAACL (2018, 2019), IJCAI (2018, 2019, 2020), ACL (2018, 2019, 2020), COLING (2018), AAAI (2019, 2020), LDK (2019), EMNLP-IJCNLP (2019), WiML (2019), AAAI-KDF (2020), ICML (2020), KDD (2020)  
+            <br />
+         <li><p>Session Chair<br /> Financial/Econ, Medical Imaging and Health, AAAI 2020
+            <br />
+     </ul>         
+     <h2>Internship</h2>
+     <ul>
+                    <li><p>Assigned to <strong><a href="http://www.linyang.com.cn/" style="color: black; text-decoration: none">LINYANG Electronics Co., Ltd.</a>&nbsp;</strong>by Tsinghua University, Jul. 2014&nbsp;<br />
+                        Topic: Data Encryption for Advanced Metering Infrastructure System <br />
+                        One journal paper in this area (as the only contributor to the idea), which is not related to my PhD topics.<br /></p></li>
+                    <p><img src="images/LinYang.png" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+
+                    <img class="icon icons8-Diploma-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/UlEQVRoQ+2ZjbFMQRCFz4uADBABIkAGREAGiAARIAJEwIsAESACZEAG6quaVuOaneme6btqy+uqrdrad+9Mnz79/8504nJ24vrrAsC/ZnBPBp5LeiTps6Q7kn7sAXYvAK8kPagU/ibpXgGTimMVwF1J94tiHyR9kYTla+VNYRgwJq5Iui3psqSPkt7NoloBcFXS19mLN+9dkwRLYVkBgPXfhm9sv4B7TbGwAuCppCdJAJ5J4rywrADA52+Fb2y/QBwQE2GZAUDgPSwpku8ZQoC/kPQymm4jAPZQfAs+DCQC4JOkGxnmdpxB8bvpeC7UC5HmyN/HkO+SSNNDiTCQmXVGirmzUgQAMQALl0a3L/79Z7G+q3eKAECvY7Dgtj4K/VcAcCF6n6zc3/M0mj4K5VAiDBzDfUxhYo00OoyDCACs70ptQ7P5HnhcqnP36QiAzN7HAyEdAL7PiMhnz1TKUERf9NqDMsKAnbcXEDpS4swVvKbMDAB7N9ul3JmnZiYKAOsziUFvdlZirLRqP8w+swygtLlQ5khpRdWmMvd0FmHAChlBxvSUOdSfF2Zxy+uSYMPFQgRA7TK2RYAFPhQeenjbLKBIK1O9KSsXMwBG4GMWty2Hux/yAti2EaNtG4MPW4Z6fjDlW9mR899XAxPWd7HgBdAKWBv/sLpZEkUoQPzGd3MJsyi/scngeWOM7yzCtlXexYIHQLSJsw0cCtaytfKoTrlY8ACYSZetkZDUyxoyIkMWRgCi1jflWhcTuPh5RIYsjADMWL83Es5U7y4LPQCZ1jerp7PQA9CyPr5NhiFNtvK8ZyDvscD5rdXNQRZ6AGibEUt39fr7UBsxDLpS+Fpb7bpOYCA8wP6HQIrlzr9kFAO9gNta0mN9O2+7JIu8+4dOKwCwEuvGXuY5ZAAKF/+GMnFNX9kMcJ7l9hkLGgs0h9M71xUGAGD9OyOguwUuljQWpgYZY2MVAOcQ7DDhan83bgBwSxaRAvf72QwAUxdnvXQBIMuSs+ecPAO/ALASpTG6lLZjAAAAAElFTkSuQmCC" width="30" height="30"><span style="font-size: 18px;"><b>Awarded Outstanding Individual in Graduates' Summer Internship,&nbsp;2014</b></span></font>
+       </ul>
+     
+                 <!-- -->
+            
+        </div>
+        
+    </div>
+    
+    
+    
+</section>  <!-- /activities-->
+
+
+
+<!-- misc Section
+ ================================================== -->
+<section id="misc">
+    
+    <div class="row section-head">
+        
+        <div class="twelve columns">
+            <br />
+            <br />
+            <h1><span>Misc.</span></h1>
+            
+            <h2>Other Activities</h2>
+            <ul>
+                <li><p>Host for IIIS New Year Party 2013, 2014&nbsp;<br /></p></li>
+                <p><img src="images/1-1.png" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><img src="images/1-2.png" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+                <p style="font-size: 15px; color:grey">You would never know the host is now very hungry.</p>
+                
+                <li><p>Assistant for Graduate Students of IIIS, 2013<br /></p></li>
+                <p><img src="images/3-1.png" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><img src="images/3-2.png" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+                
+                
+                <!--<p style="font-size: 15px; color:grey">When organizing this autumn outing, some students wanted to go hiking but some only wanted to go to the KTV or play games, and the other preferred to eat delicious food just as me. Finally I found a place where we made all the ideas come true.</p>-->
+                <p><img src="images/4-1.png" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><img src="images/4-2.png" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+                <p style="font-size: 15px; color:grey">I organized a successful Doctoral Consortium with PhDs from both Computer Science and Physics.</p>
+                <p><img src="images/5-1.jpg" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><img src="images/5-2.jpg" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+                <p style="font-size: 15px; color:grey">This is a chorus competition organized by Tsinghua University, but the judgers are the top singers in China. I'm proud of the prize we won!</p>
+                <p><img src="images/6-1.jpg" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><img src="images/6-2.jpg" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+                <p style="font-size: 15px; color:grey">The second picture records the very first timing when our team won a competition!</p>
+                
+                <li><p>Vice Minister of the Academic Ministry in Graduate Association, 2013<br /></p></li>
+                
+                <li><p>League Secretary of IIIS Grad2, 2012<br /></p></li>
+            </ul>
+            <p><img src="images/7-1.png" height="200" width="300" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+            <p style="font-size: 15px; color:grey">I'm one of the editors.</p>
+            
+            <img class="icon icons8-Diploma-1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAC/UlEQVRoQ+2ZjbFMQRCFz4uADBABIkAGREAGiAARIAJEwIsAESACZEAG6quaVuOaneme6btqy+uqrdrad+9Mnz79/8504nJ24vrrAsC/ZnBPBp5LeiTps6Q7kn7sAXYvAK8kPagU/ibpXgGTimMVwF1J94tiHyR9kYTla+VNYRgwJq5Iui3psqSPkt7NoloBcFXS19mLN+9dkwRLYVkBgPXfhm9sv4B7TbGwAuCppCdJAJ5J4rywrADA52+Fb2y/QBwQE2GZAUDgPSwpku8ZQoC/kPQymm4jAPZQfAs+DCQC4JOkGxnmdpxB8bvpeC7UC5HmyN/HkO+SSNNDiTCQmXVGirmzUgQAMQALl0a3L/79Z7G+q3eKAECvY7Dgtj4K/VcAcCF6n6zc3/M0mj4K5VAiDBzDfUxhYo00OoyDCACs70ptQ7P5HnhcqnP36QiAzN7HAyEdAL7PiMhnz1TKUERf9NqDMsKAnbcXEDpS4swVvKbMDAB7N9ul3JmnZiYKAOsziUFvdlZirLRqP8w+swygtLlQ5khpRdWmMvd0FmHAChlBxvSUOdSfF2Zxy+uSYMPFQgRA7TK2RYAFPhQeenjbLKBIK1O9KSsXMwBG4GMWty2Hux/yAti2EaNtG4MPW4Z6fjDlW9mR899XAxPWd7HgBdAKWBv/sLpZEkUoQPzGd3MJsyi/scngeWOM7yzCtlXexYIHQLSJsw0cCtaytfKoTrlY8ACYSZetkZDUyxoyIkMWRgCi1jflWhcTuPh5RIYsjADMWL83Es5U7y4LPQCZ1jerp7PQA9CyPr5NhiFNtvK8ZyDvscD5rdXNQRZ6AGibEUt39fr7UBsxDLpS+Fpb7bpOYCA8wP6HQIrlzr9kFAO9gNta0mN9O2+7JIu8+4dOKwCwEuvGXuY5ZAAKF/+GMnFNX9kMcJ7l9hkLGgs0h9M71xUGAGD9OyOguwUuljQWpgYZY2MVAOcQ7DDhan83bgBwSxaRAvf72QwAUxdnvXQBIMuSs+ecPAO/ALASpTG6lLZjAAAAAElFTkSuQmCC" width="20" height="20">
+                
+                <span style="font-size: 18px;">
+                    Awarded Outstanding Student Leader of Tsinghua University, 2014</span></div>
+        <br />
+        
+
+            <p>Interests: Go (from the age of five), Piano, Guitar</a>.
+            </p>
+            
+        </div>
+        
+    </div>
+    
+    
+    
+</section>  <!-- /misc-->
+
+
+<script src="//t1.extreme-dm.com/f.js" id="eXF-yangcy-0" async defer></script>
+
+<!-- <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=7E1B&d=gUx5HieuiKM_ia7yvpG1290VYU7__5RGTLxBFHJ8Bz4"></script>-->
+
+        <h3 align="right">Last Updated: July 28, 2019.</h3><br />
+        <p align="right"><font face="Times New Roman"><span style="font-size: 10px;">Credits: Teaching icon from Icons8.</span></font></p>
+        
+          
+    </body>
+</html>

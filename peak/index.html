@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PEAK</title>
+
+<script src="Color.js">
+</script>
+
+<style>
+body {
+    width:80%;
+    margin:0 auto;
+    background-color: white;
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    font-size: 25px;
+}
+h2 {
+    color: black;
+}
+p {
+    font-family: "Times New Roman";
+    font-size: 20px;
+}
+</style>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body>
+<!--<input type="button" onclick="go()" value="Click Me!">-->
+<img src="images/peak-logo.png" height="160" width="120" align="left" Hspace="30"  Vspace="10"/>
+</br>
+</br>
+<h1>PEAK: <font color="#F2DD22">Pyramid</font> Evaluation via <font color="grey">Automated</font> Knowledge Extraction</h1>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+<h2>1. Introduction </h2>
+<p>This package provides a Java implementation of PEAK, the first tool to automatically generate the pyramid models that enables the whole automatical assessment of both human and machine summaries. For more details about the approach please refer to our <a href="https://www.aaai.org/ocs/index.php/AAAI/AAAI16/paper/download/12481/12007">paper</a>.</p>
+
+<h2>2. Installation </h2>
+<p>After installing <a href="https://eclipse.org/downloads/">Eclipse</a> or another Integrated Development Environment (IDE), you can new a java project, for instance, with the name "PEAK". Then please put <a href="codes/codes.zip">the source codes</a> into your "workspace/PEAK/src". You may need <a href="https://github.com/pilehvar/ADW">ADW</a> when running our source codes. If you are using Eclipse, you can download the jar package of ADW, and add it to your project as external jars, together with other supported files of ADW. To save your time, here are all the external <a href="codes/jars.zip">JARs</a> including ADW ones. You need to add them following the steps below.</p>
+<p><img src="images/2-1.png" height="120" width="450" align="left" Hspace="30"  Vspace="10"/><img src="images/2-2.png" height="210" width="450" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+<p><img src="images/2-3.png" height="320" width="450" align="left" Hspace="30"  Vspace="10"/><img src="images/2-4.png" height="320" width="450" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+<p> For <a href="https://github.com/pilehvar/ADW/">the supported files</a> of ADW, you need to add them into your "workspace/PEAK" as follows.
+<p><img src="images/adw.png" height="160" width="250" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+<h2>3. Requirement </h2>
+<p>Java 8 (JRE 1.8) or higher</p>
+<h2>4. Quick Start </h2>
+<p>There are different aims to run PEAK. <i>Model 1</i>: Given model summaries, generate the pyramid; <i>Model 2</i>: Given a pyramid it already generated, score new summaries; <i>Model 3</i>: Given model summaries and summaries to score, generate the pyramid and the scores.</p>
+<p>Here are the sample <a href="dataset/dataset.zip">dataset</a> including input and output. You can add it into "workspace/PEAK" as follows.</p>
+<p><img src="images/sample.png" height="180" width="250" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+<p>When you run "model1.java" in the picture below for <i>Model 1</i>, you can generate the pyramid given model summaries. <i>Model 1</i> is supported by 11 small codes (from "step1.java" to "step11.java") and each has its own unique purpose. That is, the final result of "step11.java" is the pyramid, and all the other results of the previous steps are the temp results needed for generating the pyramid. "model2.java" is for <i>Model 2</i>, i.e., scoring new summaries given a pyramid you already generated. And "model3.java" is for <i>Model 3</i>.</p>
+<p><img src="images/whole.png" height="300" width="210" align="left" Hspace="30"  Vspace="10"/><br style="clear:both" /></p>
+<p>Please note that, for other dataset that you want to use, you should replace the names of input files (model summaries and students’ summaries) according to your dataset. Here are four places that need your revisions: "step1.java", "step6.java", "step7.java", "step12.java".</p>
+
+<p>Please also note that, you may need <a href="https://www.mpi-inf.mpg.de/departments/databases-and-information-systems/software/clausie/">ClausIE</a> to pre-process your input files. Here are <a href="http://resources.mpi-inf.mpg.de/d5/clausie/tutorial_.html">the tutorial</a> and <a href="http://resources.mpi-inf.mpg.de/d5/clausie/clausie-0-0-1.zip">the source code and binaries</a> of ClausIE.</p>
+<h2>5. License </h2>
+<p>PEAK: Pyramid Evaluation via Automated Knowledge Extraction</br>
+Copyright (c) 2015 Qian Yang. All Rights Reserved.</p>
+<p>If you use this system, please cite the following paper:</p>
+<p><strong>PEAK: Pyramid Evaluation via Automated Knowledge Extraction.</strong> <a href="others/summary-peak.bib">BiBTeX</a></br>
+Qian Yang, Rebecca J. Passonneau, Gerard de Melo.</br>
+In: <i>Proceedings of the 30th AAAI Conference on Artificial Intelligence (AAAI 2016).</i> AAAI Press.</p>
+<p>For more information or bug reports please contact: laraqianyang[at]gmail[dot]com.</p>
+
+<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=7E1B&d=6an4uCpVT3ejDKAXaJHZAjSwI-gsWyey1OnSyxcHBaU"></script>
+<p style="text-align:right">Version 2.0 -- February 8, 2016.</p>
+
+</body>
+</html>
